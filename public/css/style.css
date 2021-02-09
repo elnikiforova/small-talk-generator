@@ -1,18 +1,10 @@
-.wrapper {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.white-text {
+  color: #fff;
 }
 
-.generate-btn {
-  border-radius: 30px;
-
-}
-
-.my-red {
-  background-color:#D6321E;
-  border: #D6321E;
+.my-tourq {
+  background-color:#09CAD6;
+  border: #09CAD6;
 }
 
 .my-ochre {
@@ -25,8 +17,40 @@
   border: #D61E91;
 }
 
-.my-tourq {
-  background-color: #13CBD6;
-  border:#13CBD6;
+.my-dark-pink {
+  background-color: #8A0657;
+  border: #8A0657;
+}
+
+.my-blue {
+  background-color: #0C828A;
+  border:#0C828A;
+}
+
+/* elements on index page */
+
+.wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate-btn {
+  border-radius: 90px;
+  height: 40px;
+  width: 300px;
+}
+
+.content {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  color: #095ed6;
 }
 
