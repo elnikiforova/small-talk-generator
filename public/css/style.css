@@ -1,0 +1,32 @@
+.wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate-btn {
+  border-radius: 30px;
+
+}
+
+.my-red {
+  background-color:#D6321E;
+  border: #D6321E;
+}
+
+.my-ochre {
+  background-color: #D69009;
+  border:#D69009;
+}
+
+.my-pink {
+  background-color:#D61E91;
+  border: #D61E91;
+}
+
+.my-tourq {
+  background-color: #13CBD6;
+  border:#13CBD6;
+}
+
