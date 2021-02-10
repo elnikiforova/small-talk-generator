@@ -3,8 +3,10 @@
 //
 
 // grab html elements: button & content div
-const btn = document.querySelector('button');
+const randomBtn = document.querySelector('.random-button');
 const content = document.querySelector('.content');
+const chooseBtn = document.querySelector('.choose-button');
+const chooseForm = document.querySelector('form');
 
 // my list of cities
 const cities = ['SEOUL', 'São Paulo', 'Bombay', 'JAKARTA', 'Karachi',

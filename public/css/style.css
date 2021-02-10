@@ -91,3 +91,12 @@ footer {
   color: #095ed6;
 }
 
+/* elements on choose page */
+
+.choose-wrapper {
+  padding-top: 2em;
+  padding-bottom: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

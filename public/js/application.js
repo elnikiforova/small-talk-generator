@@ -1,14 +1,19 @@
 // presenting data on page: city, weather
 
-btn.addEventListener('click', async (e) => {
-  try {
-    const data = await getCatFact();
-    updateCatFact(data);
-  }
-  catch (err) {
-    console.log(err);
-  }
-});
+if (randomBtn) {
+  console.log('random small talk page');
+
+  randomBtn.addEventListener('click', async (e) => {
+    try {
+      const data = await getCatFact();
+      updateCatFact(data);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  });
+}
+
 
 // const num = getRandom(3);
 
@@ -40,15 +45,15 @@ btn.addEventListener('click', async (e) => {
 //       console.log(err);
 //     }
 //     break;
-  // case 3:
-  //   try {
-  //     const data = await getRMChar();
-  //     updateRMChar(data);
-  //   }
-  //   catch (err) {
-  //     console.log(err);
-  //   }
-  //   break;
+// case 3:
+//   try {
+//     const data = await getRMChar();
+//     updateRMChar(data);
+//   }
+//   catch (err) {
+//     console.log(err);
+//   }
+//   break;
 // }
 
 // try {
@@ -58,3 +63,14 @@ btn.addEventListener('click', async (e) => {
 // catch (err) {
 //   console.log(err);
 // }
+
+if (chooseBtn) {
+  console.log('choose your fighter');
+
+  console.log(chooseForm[0]);
+
+  chooseForm.addEventListener('submit', (e) => {
+    // const choice = 
+    console.log();
+  })
+}
