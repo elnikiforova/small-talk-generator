@@ -5,49 +5,86 @@
 .my-tourq {
   background-color:#09CAD6;
   border: #09CAD6;
+  color: white;
 }
 
-.my-ochre {
-  background-color: #D69009;
-  border:#D69009;
+.my-dark-blue {
+  background-color:#095ed6;
+  border:#095ed6;
+  color: white;
 }
 
 .my-pink {
   background-color:#D61E91;
   border: #D61E91;
+  color: white;
 }
 
 .my-dark-pink {
   background-color: #8A0657;
   border: #8A0657;
+  color: white;
 }
 
 .my-blue {
   background-color: #0C828A;
   border:#0C828A;
+  color: white;
 }
+
+/* .my-tourq.my-ochre.my-pink.my-dark-pink.my-blue:hover {
+  background-color: #095ed6;
+  border:#095ed6;
+} */
 
 /* elements on index page */
 
 .wrapper {
-  height: 100px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .generate-btn {
-  border-radius: 90px;
-  height: 40px;
-  width: 300px;
+  border-radius: 100px;
+  min-height: 100px;
+  width: 320px;
+  font-size: x-large;
+}
+
+.generate-btn:hover {
+  background-color: #095ed6;
+}
+
+.generate-btn:focus {
+  outline: 0;
 }
 
 .content {
-  min-height: 350px;
+  margin: auto;
+  min-height: 600px;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+}
+
+.small-talk {
+  margin: 0.5em;
+  margin-bottom: 0;
+  padding: 0.7em 1.2em;
+  border-radius: 90px;
+  font-size: medium;
+}
+
+.source {
+  font-size: small;
+}
+
+image {
+  padding-top: 0.2em;
 }
 
 footer {

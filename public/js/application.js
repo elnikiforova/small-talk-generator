@@ -1,33 +1,60 @@
-const btn = document.querySelector('button');
-const content = document.querySelector('.content');
+// presenting data on page: city, weather
 
-const updateCity = async (city) => {
-
-  const cityDets = await getCity(city);
-  const weather = await getWeather(cityDets.Key);
-
-  return { cityDets, weather };
-};
-
-const updateUI = data => {
-  // destructure properties
-  const { cityDets, weather } = data;
-
-  const template = `Have you heard that today it's ${weather.WeatherText} in ${cityDets.EnglishName}?`
-
-  // update details template
-  content.innerHTML += `
-  <div class="small-talk">
-    <p>
-      ${template.toLowerCase()}
-    </p>
-  </div>
-  `;
-};
-
-btn.addEventListener('click', e => {
-  updateCity(getRandomCity())
-    .then(data => updateUI(data))
-    .catch(err => console.log(err));
+btn.addEventListener('click', async (e) => {
+  try {
+    const data = await getCatFact();
+    updateCatFact(data);
+  }
+  catch (err) {
+    console.log(err);
+  }
 });
 
+// const num = getRandom(3);
+
+// switch (num) {
+//   case 0:
+//     try {
+//       const data = await spaceFlightNews();
+//       updateSpaceNews(data);
+//     }
+//     catch (err) {
+//       console.log(err);
+//     }
+//     break;
+//   case 1:
+//     try {
+//       const data = await randomQuote();
+//       updateQuote(data);
+//     }
+//     catch (err) {
+//       console.log(err);
+//     }
+//     break;
+//   case 2:
+//     try {
+//       const data = await getGuardian();
+//       updateGuardian(data);
+//     }
+//     catch (err) {
+//       console.log(err);
+//     }
+//     break;
+  // case 3:
+  //   try {
+  //     const data = await getRMChar();
+  //     updateRMChar(data);
+  //   }
+  //   catch (err) {
+  //     console.log(err);
+  //   }
+  //   break;
+// }
+
+// try {
+//   const data = await updateCity(getRandomCity());
+//   updateWeather(data);
+// }
+// catch (err) {
+//   console.log(err);
+// }
