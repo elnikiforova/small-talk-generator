@@ -1,4 +1,5 @@
 // web api for space flight news
+const spaceFlightSource = 'spaceflightnewsapi.net';
 
 const spaceFlightNews = async () => {
   const response = await fetch('https://test.spaceflightnewsapi.net/api/v2/blogs');
@@ -17,7 +18,7 @@ const updateSpaceNews = async (data) => {
   smallTalk.classList.add('small-talk', 'my-dark-blue');
 
   let template = `
-    <span>apparently, ${mydata.summary}..</span> 
+    <span>${mydata.summary}..</span> 
     <a target="_blank" rel="noopener noreferrer" href="${mydata.url}">link</a>
   `;
 
@@ -28,7 +29,7 @@ const updateSpaceNews = async (data) => {
   // add source
   const source = document.createElement('div');
   source.classList.add('source');
-  template = `source: spaceflightnewsapi.net`;
+  template = `source: ${spaceFlightSource}`;
   source.innerText = template;
   smallTalk.insertAdjacentElement('afterend', source);
 }

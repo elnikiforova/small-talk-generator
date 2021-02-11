@@ -85,6 +85,10 @@
   overflow: scroll;
 }
 
+.small-talk a:hover {
+ color:#ffa2db;
+}
+
 .source {
   font-size: small;
 }
@@ -127,3 +131,23 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* elements on about page */
+
+.wrapper-about {
+  height: 70px;
+}
+
+.about-content {
+  padding: 0 1em;
+  max-width: 350px;
+}
+
+.about-content a {
+  color: #8A0657;
+}
+
+.about-content a:hover {
+  color: #09CAD6;
+}
+

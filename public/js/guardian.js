@@ -1,4 +1,5 @@
 // the Guardian web API
+const guardianSource = 'open-platform.theguardian.com';
 
 const getGuardian = async (search, action) => {
   const keys = await getKeys(action);
@@ -35,7 +36,7 @@ const updateGuardian = async (data) => {
   // add source
   const source = document.createElement('div');
   source.classList.add('source');
-  template = `source: content.guardianapis.com`;
+  template = `source: ${guardianSource}`;
   source.innerText = template;
   smallTalk.insertAdjacentElement('afterend', source);
 }

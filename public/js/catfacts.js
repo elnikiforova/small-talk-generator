@@ -1,4 +1,5 @@
 // cat facts web API
+const catSource = 'alexwohlbruck.github.io/cat-facts/';
 
 const getCatFact = async () => {
   const base = 'https://cat-fact.herokuapp.com';
@@ -25,7 +26,7 @@ const updateCatFact = async (data) => {
   // add source
   const source = document.createElement('div');
   source.classList.add('source');
-  template = `source: alexwohlbruck.github.io/cat-facts/`;
+  template = `source: ${catSource}`;
   source.innerText = template;
   smallTalk.insertAdjacentElement('afterend', source);
 }

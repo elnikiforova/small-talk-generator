@@ -170,3 +170,24 @@ if (chooseForm) {
     }
   })
 }
+
+if (aboutContent) {
+  console.log('about page');
+
+  const sourceList = `
+    <br><br>
+    sources: 
+    <br>
+    <a href="https://${catSource}" target="_blank" rel="noopener noreferrer">${catSource}</a>
+    <br>
+    <a href="https://${spaceFlightSource}" target="_blank" rel="noopener noreferrer">${spaceFlightSource}</a>
+    <br>
+    <a href="https://${guardianSource}" target="_blank" rel="noopener noreferrer">${guardianSource}</a>
+    <br>
+    <a href="https://${quoteSource}" target="_blank" rel="noopener noreferrer">${quoteSource}</a>
+    
+    
+  `;
+
+  aboutContent.innerHTML += sourceList;
+}

@@ -8,6 +8,7 @@ const randomBtn = document.querySelector('.random-button');
 const randomForm = document.querySelector('.random-form');
 const chooseBtn = document.querySelector('.choose-button');
 const chooseForm = document.querySelector('.choose-form');
+const aboutContent = document.querySelector('.about-content');
 
 // my list of cities
 const cities = ['SEOUL', 'São Paulo', 'Bombay', 'JAKARTA', 'Karachi',

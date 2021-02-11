@@ -1,4 +1,5 @@
 // web api for famous quotes
+const quoteSource = '	api.quotable.io';
 
 async function randomQuote() {
   const response = await fetch('https://api.quotable.io/random?maxLength=50');
@@ -20,7 +21,7 @@ const updateQuote = data => {
   // add source
   const source = document.createElement('div');
   source.classList.add('source');
-  template = `source: api.quotable.io`;
+  template = `source: ${quoteSource}`;
   source.innerText = template;
   smallTalk.insertAdjacentElement('afterend', source);
 }
