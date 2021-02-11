@@ -176,17 +176,21 @@ if (aboutContent) {
 
   const sourceList = `
     <br><br>
-    sources: 
+    sources (free apis): 
     <br>
     <a href="https://${catSource}" target="_blank" rel="noopener noreferrer">${catSource}</a>
     <br>
-    <a href="https://${spaceFlightSource}" target="_blank" rel="noopener noreferrer">${spaceFlightSource}</a>
+    <a href="https://${nasaSource}" target="_blank" rel="noopener noreferrer">${nasaSource}</a>
+    <br>
+    <a href="https://${quoteSource}" target="_blank" rel="noopener noreferrer">${quoteSource}</a>
+    <br>
+    <a href="https://${harvardSource}" target="_blank" rel="noopener noreferrer">${harvardSource}</a>
     <br>
     <a href="https://${guardianSource}" target="_blank" rel="noopener noreferrer">${guardianSource}</a>
     <br>
-    <a href="https://${quoteSource}" target="_blank" rel="noopener noreferrer">${quoteSource}</a>
-    
-    
+    <a href="https://${spaceFlightSource}" target="_blank" rel="noopener noreferrer">${spaceFlightSource}</a>
+    <br>
+    <a href="https://${rmSource}" target="_blank" rel="noopener noreferrer">${rmSource}</a>
   `;
 
   aboutContent.innerHTML += sourceList;

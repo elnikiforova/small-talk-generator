@@ -1,4 +1,5 @@
 // NASA API
+const nasaSource = 'api.nasa.gov';
 
 const getNASAapod = async (action) => {
   const keys = await getKeys(action);
@@ -56,7 +57,7 @@ const updateNASA = async (data, mode) => {
     // add source
     const source = document.createElement('div');
     source.classList.add('source');
-    template = `source: api.nasa.gov`;
+    template = `source: ${nasaSource}`;
     source.innerText = template;
     anchor.insertAdjacentElement('afterend', source);
   }

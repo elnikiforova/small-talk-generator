@@ -1,4 +1,5 @@
 // the Rick and Morty API locations
+const rmSource = 'rickandmortyapi.com';
 
 const getRMChar = async () => {
   const num = getRandom(671);
@@ -32,7 +33,7 @@ const updateRMChar = async (data) => {
   // add source
   const source = document.createElement('div');
   source.classList.add('source');
-  template = `source: rickandmortyapi.com`;
+  template = `source: ${rmSource}`;
   source.innerText = template;
   image.insertAdjacentElement('afterend', source);
 }
