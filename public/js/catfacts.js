@@ -7,14 +7,16 @@ const getCatFact = async () => {
   const response = await fetch(base + query);
   const data = await response.json();
 
+  console.log('Cat Facts API:', data);
+
   return data;
 }
 
 const updateCatFact = async (data) => {
   const smallTalk = document.createElement('div');
-  smallTalk.classList.add('small-talk', 'my-dark-pink');
+  smallTalk.classList.add('small-talk', 'my-dark-pink', 'big');
 
-  let template = `<span>${data.text}</span>`;
+  let template = `<span>${data.text}..</span>`;
 
   template = template.toLowerCase();
   smallTalk.innerHTML = template;
