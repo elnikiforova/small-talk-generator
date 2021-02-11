@@ -1,10 +1,11 @@
 // NASA API
 
-const nasaKey = 'syqhLGlbJ7qMZ88zdzZHktz8fFI5uGocxS20an4m';
+const getNASAapod = async (action) => {
+  const keys = await getKeys(action);
+  const nKey = keys.nasaKey;
 
-const getNASAapod = async () => {
   const base = 'https://api.nasa.gov/planetary/';
-  const query = `apod?api_key=${nasaKey}&count=1`;
+  const query = `apod?api_key=${nKey}&count=1`;
 
   const response = await fetch(base + query);
   const data = await response.json();

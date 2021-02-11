@@ -1,11 +1,10 @@
 // api request for weather forcast
-const accuKey = 'CIHP4FMXR1PzQk6lZ0yZsFYBcvcTxS2V';
 
 // get weather information
-const getWeather = async (id) => {
+const getWeather = async (id, aKey) => {
 
   const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
-  const query = `${id}?apikey=${accuKey}`;
+  const query = `${id}?apikey=${aKey}`;
 
   const response = await fetch(base + query);
   const data = await response.json();
@@ -16,10 +15,10 @@ const getWeather = async (id) => {
 }
 
 // get city information
-const getCity = async (city) => {
+const getCity = async (city, aKey) => {
 
   const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
-  const query = `?apikey=${accuKey}&q=${city}`;
+  const query = `?apikey=${aKey}&q=${city}`;
 
   const response = await fetch(base + query);
   const data = await response.json();
@@ -29,10 +28,13 @@ const getCity = async (city) => {
   return data[0];
 }
 
-const updateCity = async (city) => {
+const updateCity = async (city, action) => {
 
-  const cityDets = await getCity(city);
-  const weather = await getWeather(cityDets.Key);
+  const keys = await getKeys(action);
+  const aKey = keys.accuKey;
+
+  const cityDets = await getCity(city, aKey);
+  const weather = await getWeather(cityDets.Key, aKey);
 
   return { cityDets, weather };
 };

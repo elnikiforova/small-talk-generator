@@ -1,11 +1,12 @@
 // presenting data on page
 
-if (randomBtn) {
+if (randomForm) {
   console.log('random small talk page');
 
-  randomBtn.addEventListener('click', async (e) => {
-    // const num = getRandom(3);
-    const num = 4;
+  randomForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const num = getRandom(4);
 
     switch (num) {
       case 0:
@@ -37,8 +38,8 @@ if (randomBtn) {
         break;
       case 3:
         try {
-          const data = await updateCity(getRandomCity());
-          updateWeather(data);
+          const data = await getNASAapod('/');
+          updateNASA(data, 'short');
         }
         catch (err) {
           console.log(err);
@@ -46,9 +47,8 @@ if (randomBtn) {
         break;
       case 4:
         try {
-          // getHarvardArt();
-          const data = await getNASAapod();
-          updateNASA(data, 'short');
+          const data = await getHarvardArt('/');
+          updateHarvardArt(data);
         }
         catch (err) {
           console.log(err);
@@ -58,10 +58,9 @@ if (randomBtn) {
   });
 }
 
-if (chooseBtn) {
+if (chooseForm) {
   console.log('choose your fighter');
   const APIs = document.getElementById('APIs');
-  const chooseWrap = document.querySelector('.choose-wrapper');
 
   chooseForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -89,7 +88,7 @@ if (chooseBtn) {
         break;
       case 'the-guardian-cinema':
         try {
-          const data = await getGuardian('cinema');
+          const data = await getGuardian('cinema', '/choose');
           updateGuardian(data);
         }
         catch (err) {
@@ -98,7 +97,7 @@ if (chooseBtn) {
         break;
       case 'the-guardian-sport':
         try {
-          const data = await getGuardian('sport');
+          const data = await getGuardian('sport', '/choose');
           updateGuardian(data);
         }
         catch (err) {
@@ -107,7 +106,7 @@ if (chooseBtn) {
         break;
       case 'the-guardian-food':
         try {
-          const data = await getGuardian('food');
+          const data = await getGuardian('food', '/choose');
           updateGuardian(data);
         }
         catch (err) {
@@ -125,7 +124,7 @@ if (chooseBtn) {
         break;
       case 'nasa-short':
         try {
-          const data = await getNASAapod();
+          const data = await getNASAapod('/choose');
           updateNASA(data, 'short');
         }
         catch (err) {
@@ -134,8 +133,17 @@ if (chooseBtn) {
         break;
       case 'nasa-full':
         try {
-          const data = await getNASAapod();
+          const data = await getNASAapod('/choose');
           updateNASA(data, 'full');
+        }
+        catch (err) {
+          console.log(err);
+        }
+        break;
+      case 'harvard-art':
+        try {
+          const data = await getHarvardArt('/choose');
+          updateHarvardArt(data);
         }
         catch (err) {
           console.log(err);
@@ -152,7 +160,7 @@ if (chooseBtn) {
         break;
       case 'weather':
         try {
-          const data = await updateCity(getRandomCity());
+          const data = await updateCity(getRandomCity(), '/choose');
           updateWeather(data);
         }
         catch (err) {

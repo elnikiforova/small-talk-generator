@@ -1,9 +1,11 @@
 // the Guardian web API
-const guardianKey = '9a699e48-4a82-4d28-bef3-eb3236f17514';
 
-const getGuardian = async (search) => {
+const getGuardian = async (search, action) => {
+  const keys = await getKeys(action);
+  const gKey = keys.guardianKey;
+
   const base = 'https://content.guardianapis.com/';
-  const query = `search?q=${search}&api-key=${guardianKey}`;
+  const query = `search?q=${search}&api-key=${gKey}`;
 
   const response = await fetch(base + query);
   const data = await response.json();
@@ -23,7 +25,7 @@ const updateGuardian = async (data) => {
 
   let template = `
     <span>The Guardian: ${mydata.webTitle}...</span> 
-    <a target="_blank" rel="noopener noreferrer" href="${mydata.webUrl}">link</a>?
+    <a target="_blank" rel="noopener noreferrer" href="${mydata.webUrl}">link</a>
   `;
 
   template = template.toLowerCase();
