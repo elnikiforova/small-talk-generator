@@ -47,19 +47,18 @@ const updateNASA = async (data, mode) => {
   }
 
   if (data.media_type === 'image') {
-    // add image as link
-    const anchor = document.createElement('div');
-    anchor.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${data.hdurl}"></a>`;
-    const image = `<img src="${data.url}" class="big-image"></img>`;
-    anchor.innerHTML = image;
-    smallTalk.insertAdjacentElement('afterend', anchor);
+    // add image
+    const img = document.createElement('img');
+    img.classList.add('big-image');
+    img.src = data.url;
+    smallTalk.insertAdjacentElement('afterend', img);
 
     // add source
     const source = document.createElement('div');
     source.classList.add('source');
     template = `source: ${nasaSource}`;
     source.innerText = template;
-    anchor.insertAdjacentElement('afterend', source);
+    img.insertAdjacentElement('afterend', source);
   }
   else {
     // add source

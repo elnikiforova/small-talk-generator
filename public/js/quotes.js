@@ -12,7 +12,7 @@ const updateQuote = data => {
   const smallTalk = document.createElement('div');
   smallTalk.classList.add('small-talk', 'my-dark-pink');
 
-  let template = `<span>"${data.content}.."<br>was it ${data.author} who said that?</span>`;
+  let template = `<span>"${data.content}.." was it ${data.author} who said that?</span>`;
 
   template = template.toLowerCase();
   smallTalk.innerHTML = template;
