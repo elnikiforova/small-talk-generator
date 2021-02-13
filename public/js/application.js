@@ -167,6 +167,14 @@ if (chooseForm) {
           console.log(err);
         }
         break;
+      case 'help-needed':
+        try {
+          getHelpNeeded();
+        }
+        catch (err) {
+          console.log(err);
+        }
+        break;
     }
   })
 }
