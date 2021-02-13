@@ -1,11 +1,11 @@
-const getHelpNeeded = async () => {
-  const cut = '?org_cats=all&is_verify=1';
+const getHelpNeeded = async (action) => {
+  const keys = await getKeys(action);
+  const hToken = keys.helpToken;
 
-  const token = 'Y4JZFl56S0HAM1FPJW5OjxWRtPs6OdxKKCfmsFUAWMsIKEEKpFZlnd1bir81';
-  const query = `organizations?org_cats=all&&is_verify=1&token=${token}`;
+  const query = `organizations?org_cats=all&&is_verify=1&token=${hToken}`;
   const base = 'https://dev.nko.tochno.st/api/';
-  const path = 'https://dev.nko.tochno.st/api/list/problems?token=Y4JZFl56S0HAM1FPJW5OjxWRtPs6OdxKKCfmsFUAWMsIKEEKpFZlnd1bir81';
-  const path2 = 'https://dev.nko.tochno.st/api/organizations?problem_path=hiv&org_cats=all&is_verify=1&token=Y4JZFl56S0HAM1FPJW5OjxWRtPs6OdxKKCfmsFUAWMsIKEEKpFZlnd1bir81';
+  const path = `https://dev.nko.tochno.st/api/list/problems?token=${hToken}`;
+  const path2 = `https://dev.nko.tochno.st/api/organizations?problem_path=hiv&org_cats=all&is_verify=1&token=${hToken}`;
 
   const response0 = await fetch(base + query);
   const data0 = await response0.json();

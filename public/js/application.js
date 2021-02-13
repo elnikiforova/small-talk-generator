@@ -169,7 +169,7 @@ if (chooseForm) {
         break;
       case 'help-needed':
         try {
-          getHelpNeeded();
+          getHelpNeeded('/choose');
         }
         catch (err) {
           console.log(err);

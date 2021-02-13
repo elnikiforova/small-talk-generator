@@ -6,6 +6,7 @@ const keys = {
   guardianKey: process.env.GUARDIAN_KEY,
   nasaKey: process.env.NASA_KEY,
   accuKey: process.env.ACCU_KEY,
+  helpToken: process.env.HELP_TOKEN,
 };
 
 module.exports.indexGet = (req, res) => {
