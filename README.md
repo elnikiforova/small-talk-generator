@@ -24,5 +24,5 @@ Express-приложение с фронтом на Handlebars и нативно
 ## Дизайн-концент
 Стили были написаны с опорой на __неоморфизм,__ один из самых актуальных трендов в веб-дизайне
 
-![small-talk-demo2](readme-assets/small-talk-demo2.png =250x)
-![small-talk-demo3](readme-assets/small-talk-demo3.png =250x)
+<img src="readme-assets/small-talk-demo2.png.jpg" alt="small-talk-demo2" style="width:200px;"/>
+<img src="readme-assets/small-talk-demo3.png.jpg" alt="small-talk-demo3" style="width:200px;"/>
