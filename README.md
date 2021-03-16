@@ -22,7 +22,7 @@ Express-приложение с фронтом на Handlebars и нативно
 Это соло-проект, идея и все аспекты приложения выполнены [Катей Никифоровой](https://github.com/elnikiforova)
 
 ## Дизайн-концент
-Стили были написаны с опорой на *неоморфизм,* один из самых актуальных трендов в веб-дизайне
+Стили были написаны с опорой на __неоморфизм,__ один из самых актуальных трендов в веб-дизайне
 
-![small-talk-demo2](readme-assets/small-talk-demo2.png)
-![small-talk-demo3](readme-assets/small-talk-demo3.png)
+![small-talk-demo2](readme-assets/small-talk-demo2.png =250x)
+![small-talk-demo3](readme-assets/small-talk-demo3.png =250x)
